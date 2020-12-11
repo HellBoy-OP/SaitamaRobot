@@ -53,13 +53,16 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 Hi {}, my name is {}! 
-I am [HellBot](https://t.me/hellbot_official) group management bot.
+I am [Suar Gamer Bot](https://t.me/suar_gamerman). I'm a suar group management bot.
+Inspired by by my god [Razor](https://t.me/rzb_razor)
+Made by..... I dont know sorry🖕🖕
 You can find my list of available commands with /help.
+Let's begin the Suar Panti!! 🐷
 """
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm a Hero For Fun and help admins manage their groups! Have a look at the following for an idea of some of \
+I'm a here For Fun and help admins manage their groups! I am inspired by My godfather. Check his name by /start .Have a look at the following for an idea of some of \
 the things I can help you with.
 
 *Main* commands available:
@@ -76,12 +79,9 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/9c2a6f7c60b29b6b7429a.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/0cc008217797c661d2631.jpg"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
-Hellbot is hosted on one of Kaizoku's Servers and doesn't require any donations as of now but \
-You can donate to the original writer of the Base code, Paul
-There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
+DONATE_STRING = """Hey. If u wanna donate something then contact my [God Father](t.me/rzb_razor)"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -204,16 +204,13 @@ def start(update: Update, context: CallbackContext):
                                 context.bot.username))
                     ],
                      [
-                         InlineKeyboardButton(
-                             text="🚑 Support Group",
-                             url=f"https://t.me/hellbot_official_chat"),
-                         InlineKeyboardButton(
-                             text="🔔 Updates Channel",
-                             url="https://t.me/hellbot_official")
+                        InlineKeyboardButton(
+                            text="🔔 Updates Channel",
+                            url="https://t.me/suar_gamerman")
                      ]]))
     else:
         update.effective_message.reply_text(
-            "I'm online!\n<b>Up since:</b> <code>{}</code>".format(uptime),
+            "Suar nhi marega boss.. oink oink🐷!\n<b>Up since:</b> <code>{}</code>".format(uptime),
             parse_mode=ParseMode.HTML)
 
 
