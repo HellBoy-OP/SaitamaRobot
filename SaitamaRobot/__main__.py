@@ -54,7 +54,7 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 Hi {}, my name is {}! 
 I am [Suar Gamer Bot](https://t.me/suar_gamerman). I'm a suar group management bot.
-Inspired by by my god [Razor](https://t.me/rzb_razor)
+Inspired by by my god [God Father](https://t.me/rzb_razor)
 Made by..... I dont know sorry🖕🖕
 You can find my list of available commands with /help.
 Let's begin the Suar Panti!! 🐷
