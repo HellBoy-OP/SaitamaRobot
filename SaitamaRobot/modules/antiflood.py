@@ -73,7 +73,7 @@ def check_flood(update, context) -> str:
             execstrings = ("Muted for {}".format(getvalue))
             tag = "TMUTE"
         send_message(update.effective_message,
-                     "Beep Boop! Boop Beep!\n{}!".format(execstrings))
+                     "🐷 Oink Oink 🐷!\n{}!".format(execstrings))
 
         return "<b>{}:</b>" \
                "\n#{}" \
