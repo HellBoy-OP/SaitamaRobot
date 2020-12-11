@@ -35,14 +35,14 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     if not (promoter.can_promote_members or
             promoter.status == "creator") and not user.id in DRAGONS:
-        message.reply_text("You don't have the necessary rights to do that!")
+        message.reply_text("You don't have the necessary rights to do that!🐷")
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "Either the user id is incorrect or you aren't reffering to a user.🐷"
         )
         return
 
@@ -53,12 +53,12 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     if user_member.status == 'administrator' or user_member.status == 'creator':
         message.reply_text(
-            "How am I meant to promote someone that's already an admin?")
+            "How am I meant to promote someone that's already an admin? You are a suar 🐷")
         return
 
     if user_id == bot.id:
         message.reply_text(
-            "I can't promote myself! Get an admin to do it for me.")
+            "🐷 I can't promote myself! Get an admin to do it for me.")
         return
 
     # set same perms as bot - bot can't assign higher perms than itself!
@@ -79,9 +79,9 @@ def promote(update: Update, context: CallbackContext) -> str:
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
             message.reply_text(
-                "I can't promote someone who isn't in the group.")
+                "I can't promote someone who isn't in the group.🐷")
         else:
-            message.reply_text("An error occured while promoting.")
+            message.reply_text("An error occured while promoting🚶.")
         return
 
     bot.sendMessage(
@@ -136,7 +136,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
     if user_id == bot.id:
         message.reply_text(
-            "I can't demote myself! Get an admin to do it for me.")
+            "🖕🐷🖕I can't demote myself! Get an admin to do it for me.")
         return
 
     try:
@@ -154,7 +154,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
         bot.sendMessage(
             chat.id,
-            f"Sucessfully demoted <b>{user_member.user.first_name or user_id}</b>!",
+            f"🐷🐷Sucessfully demoted <b>{user_member.user.first_name or user_id}</b>!",
             parse_mode=ParseMode.HTML)
 
         log_message = (
@@ -192,7 +192,7 @@ def set_title(update: Update, context: CallbackContext):
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "You don't seem to be referring to a user or the ID specified is incorrect..🐷"
         )
         return
 
@@ -354,7 +354,7 @@ def adminlist(update, context):
             parse_mode=ParseMode.MARKDOWN)
 
     administrators = bot.getChatAdministrators(chat_id)
-    text = "Admins in *{}*:".format(update.effective_chat.title)
+    text = "Admins in *{}* from Suar Bot :".format(update.effective_chat.title)
 
     bot_admin_list = []
 
